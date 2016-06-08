@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="tituloFilme">nome</string>
+    <string name="anoFilme">ano</string>
+    <string name="duracaoFIlme">duracao</string>
+    <string name="notaFilme">nota</string>
+    <string name="descricaoFilme">descrição</string>
+</resources>

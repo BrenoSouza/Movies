@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:debuggable = "true"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tituloFilme"
+        android:textColor="#fefefe"
+        android:id="@+id/titulo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/accent_material_dark"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="180dp"
+        android:id="@+id/posterMovie"
+        android:layout_below="@+id/titulo"
+        android:layout_alignLeft="@+id/scrollView"
+        android:layout_alignStart="@+id/scrollView"
+        android:layout_marginTop="7dp"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/anoFilme"
+        android:id="@+id/ano"
+        android:textIsSelectable="false"
+        android:textSize="25sp"
+        android:textAlignment="inherit"
+        android:layout_marginTop="22dp"
+        android:layout_alignTop="@+id/posterMovie"
+        android:layout_toRightOf="@+id/posterMovie"
+        android:layout_toEndOf="@+id/posterMovie"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/duracaoFIlme"
+        android:id="@+id/duracao"
+        android:layout_alignWithParentIfMissing="false"
+        android:textAlignment="inherit"
+        android:textStyle="italic"
+        android:layout_below="@+id/ano"
+        android:layout_alignLeft="@+id/ano"
+        android:layout_alignStart="@+id/ano"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/notaFilme"
+        android:id="@+id/nota"
+        android:layout_below="@+id/duracao"
+        android:textAlignment="inherit"
+        android:layout_alignRight="@+id/duracao"
+        android:layout_alignEnd="@+id/duracao"
+        android:layout_alignLeft="@+id/duracao"
+        android:layout_alignStart="@+id/duracao"
+        android:layout_marginLeft="5dp"
+        android:textSize="25sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/posterMovie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fillViewport="false">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/descricaoFilme"
+            android:id="@+id/descricao"
+            android:layout_alignBottom="@+id/scrollView"
+            android:layout_alignLeft="@+id/scrollView"
+            android:layout_alignStart="@+id/scrollView"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:textAlignment="inherit" />
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:scaleType="fitXY"
+        android:layout_height="80dp"
+        android:id="@+id/play"
+        android:src="@android:drawable/ic_media_play"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignLeft="@+id/scrollView"
+        android:layout_alignStart="@+id/scrollView" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorito"
+        android:id="@+id/isFavorito"
+        android:checked="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/nota"
+        android:layout_alignLeft="@+id/nota"
+        android:layout_alignStart="@+id/nota" />
+
+</RelativeLayout>
